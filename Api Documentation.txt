@@ -1,0 +1,82 @@
+1. List Student Registration
+    Description: Return the Students Registration.
+    Method: GET
+    Endpoint: {{base_url}}/api/method/zeiad_app.student_registration.doctype.student_reg.student_reg.list_registrations
+    Expected Response:
+        Status: 200
+        Response Body:
+       {
+    "message": {
+        "Status Code": 200,
+        "message": [
+            {
+                "name": "ollkliinfh",
+                "creation": "2025-04-13 23:56:01.039984",
+                "modified": "2025-04-13 23:56:01.039984",
+                "modified_by": "Administrator",
+                "owner": "Administrator",
+                "docstatus": 0,
+                "idx": 0,
+                "_user_tags": null,
+                "_comments": null,
+                "_assign": null,
+                "_liked_by": null,
+                "student_name": "Mazen",
+                "email": "mazen@hotmail.com",
+                "course_interest": "Mobile Development",
+                "phone_number": "01225148335",
+                "expect_start_date": "2025-04-13"
+            }
+        ]
+    }
+}
+
+
+
+2. New Student Registration
+    Description: Submit New Student Registration
+    Method: POST
+    Endpoint: {{base_url}}/api/method/zeiad_app.student_registration.doctype.student_reg.student_reg.submit_registration
+
+    data :
+	{
+    
+	"student_name":"Zeiad Madboly",
+    	"email":"zeiadmadboly@gmail.com",
+    	"course_interest":"Data Science",
+    	"phone_number":"01061331309",
+    	"expect_start_date":"2024-04-14"
+    
+    
+	}
+
+    Expected Response:
+    Status Code: 200 
+    Response Body:
+    {
+    "message": {
+        "message": "Registration submitted successfully.",
+        "status": "success",
+        "data": {
+            "name": "07uq8humef",
+            "owner": "Guest",
+            "creation": "2025-04-14 00:43:21.811293",
+            "modified": "2025-04-14 00:43:21.811293",
+            "modified_by": "Guest",
+            "docstatus": 0,
+            "idx": 0,
+            "student_name": "Zeiad Madboly",
+            "email": "zeiadmadboly@gmail.com",
+            "course_interest": "Data Science",
+            "phone_number": "01061331309",
+            "expect_start_date": "2024-04-14",
+            "doctype": "Student Reg"
+        }
+    }
+}
+
+
+Variables
+Replace {{base_url}} with the appropriate base URL for your environment.  for example : 'http://localhost:8080'
+
+.
